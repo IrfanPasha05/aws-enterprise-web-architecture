@@ -1,7 +1,5 @@
 <h1 align="center">☁️ AWS Enterprise Production Architecture</h1>
 
-## Architecture Diagram
-![Architecture](architecture.png)
 
 
 <h3 align="center">
