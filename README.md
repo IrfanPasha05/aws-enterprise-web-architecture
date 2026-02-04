@@ -1,5 +1,9 @@
 <h1 align="center">☁️ AWS Enterprise Production Architecture</h1>
 
+## Architecture Diagram
+![Architecture](architecture.png)
+
+
 <h3 align="center">
 Highly Available • Auto Scaling • Self Healing • Monitoring • Auditing
 </h3>
