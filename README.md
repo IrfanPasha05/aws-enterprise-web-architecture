@@ -44,6 +44,8 @@ This project demonstrates the core skills needed for a **Cloud / DevOps Engineer
 
 markdown
 Copy code
+
+
          🌍 Internet Users
                 │
                 ▼
@@ -60,10 +62,6 @@ Copy code
 ▼
 🔐 CloudTrail Logging
 
-yaml
-Copy code
-
----
 
 # ☁️ AWS Services Used
 
@@ -90,15 +88,18 @@ sudo apt install apache2 -y
 sudo systemctl start apache2
 sudo systemctl enable apache2
 echo "<h1>AWS Auto Scaling Server $(hostname)</h1>" > /var/www/html/index.html
+
 🔥 Real Production Tests Performed
-Test Scenario	Result
+
+     Test Scenario	                         Result
 Access Website via Load Balancer	✅ Success
 Manually Terminated EC2 Instance	✅ Auto-Healing Triggered
-High CPU Simulation	✅ Auto Scaling Triggered
-CloudWatch Alarm Triggered	✅ Verified
-CloudTrail Logged Actions	✅ Verified
+High CPU Simulation	                ✅ Auto Scaling Triggered
+CloudWatch Alarm Triggered	        ✅ Verified
+CloudTrail Logged Actions	        ✅ Verified
 
 💡 Key Features Achieved
+
 ✨ High Availability
 ✨ Fault Tolerance
 ✨ Self-Healing Infrastructure
@@ -107,6 +108,7 @@ CloudTrail Logged Actions	✅ Verified
 ✨ Security Auditing
 
 📸 What Happens When Server Fails?
+
 1️⃣ EC2 instance terminated manually
 2️⃣ Auto Scaling detects failure
 3️⃣ New EC2 launched automatically
