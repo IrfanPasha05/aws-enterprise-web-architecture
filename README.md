@@ -1,40 +1,71 @@
+<h1 align="center">☁️ AWS Enterprise Production Architecture</h1>
+
+<h3 align="center">
+Highly Available • Auto Scaling • Self Healing • Monitoring • Auditing
+</h3>
+
 <p align="center">
-<img src="https://img.shields.io/badge/AWS-Cloud-orange?style=for-the-badge&logo=amazonaws&logoColor=white"/>
-<img src="https://img.shields.io/badge/EC2-Compute-red?style=for-the-badge&logo=amazonec2&logoColor=white"/>
-<img src="https://img.shields.io/badge/VPC-Network-blue?style=for-the-badge&logo=amazonaws&logoColor=white"/>
-<img src="https://img.shields.io/badge/ALB-LoadBalancer-green?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/AutoScaling-Enabled-brightgreen?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/CloudWatch-Monitoring-yellow?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/CloudTrail-Auditing-lightgrey?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/AWS-Cloud-orange?style=for-the-badge&logo=amazonaws&logoColor=white"/>
+  <img src="https://img.shields.io/badge/EC2-Compute-red?style=for-the-badge&logo=amazonec2&logoColor=white"/>
+  <img src="https://img.shields.io/badge/VPC-Network-blue?style=for-the-badge&logo=amazonaws&logoColor=white"/>
+  <img src="https://img.shields.io/badge/ALB-LoadBalancer-green?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/AutoScaling-Enabled-brightgreen?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/CloudWatch-Monitoring-yellow?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/CloudTrail-Auditing-lightgrey?style=for-the-badge"/>
 </p>
 
-<h1 align="center">🚀 AWS Enterprise Web Architecture</h1>
-<h3 align="center">Highly Available • Auto Scaling • Self Healing • Production Ready</h3>
+<p align="center">
+  <img src="architecture.png" width="900"/>
+</p>
 
 ---
 
-## 🏗️ Architecture Diagram
-![Architecture](architecture.png)
+# 🌟 Project Summary
+
+Designed and deployed a **Production-Ready AWS Infrastructure** capable of handling real-world traffic using modern **Cloud & DevOps practices**.
+
+This system automatically:
+- Distributes traffic
+- Replaces failed servers
+- Scales based on demand
+- Monitors performance
+- Logs all activities
 
 ---
 
-## 🌍 Project Overview
+# 🎯 Why This Project Matters
 
-This project demonstrates how to design and deploy a **Production-Ready AWS Infrastructure** capable of handling real-world traffic using **Auto Scaling, Load Balancing, Monitoring, and Security auditing.**
-
-This architecture guarantees:
-
-✔ High Availability  
-✔ Fault Tolerance  
-✔ Self Healing Infrastructure  
-✔ Automatic Scaling  
-✔ Real-time Monitoring  
-✔ Security & Audit Logging  
+Modern companies require **zero-downtime infrastructure**.  
+This project demonstrates the core skills needed for a **Cloud / DevOps Engineer role**.
 
 ---
 
-## ☁️ AWS Services Used
+# 🧠 Architecture Overview
+
+markdown
+Copy code
+         🌍 Internet Users
+                │
+                ▼
+    ⚖️ Application Load Balancer
+                │
+    ┌───────────┴───────────┐
+    ▼                       ▼
+💻 EC2 Instance 💻 EC2 Instance
+(Auto Scaling) (Auto Scaling)
+│ │
+└───────────┬───────────┘
+▼
+📊 CloudWatch Monitoring
+▼
+🔐 CloudTrail Logging
+
+yaml
+Copy code
+
+---
+
+# ☁️ AWS Services Used
 
 | Category | Services |
 |---|---|
@@ -48,14 +79,7 @@ This architecture guarantees:
 
 ---
 
-## 🔄 Architecture Flow
-
-Users → Application Load Balancer → Auto Scaling EC2 → CloudWatch → CloudTrail
-
-
----
-
-## ⚙️ Automated Server Setup
+# ⚙️ Infrastructure Automation Script
 
 `scripts/install_apache.sh`
 
@@ -66,36 +90,32 @@ sudo apt install apache2 -y
 sudo systemctl start apache2
 sudo systemctl enable apache2
 echo "<h1>AWS Auto Scaling Server $(hostname)</h1>" > /var/www/html/index.html
+🔥 Real Production Tests Performed
+Test Scenario	Result
+Access Website via Load Balancer	✅ Success
+Manually Terminated EC2 Instance	✅ Auto-Healing Triggered
+High CPU Simulation	✅ Auto Scaling Triggered
+CloudWatch Alarm Triggered	✅ Verified
+CloudTrail Logged Actions	✅ Verified
 
+💡 Key Features Achieved
+✨ High Availability
+✨ Fault Tolerance
+✨ Self-Healing Infrastructure
+✨ Automatic Scaling
+✨ Real-Time Monitoring
+✨ Security Auditing
 
-🧪 Validation Tests
+📸 What Happens When Server Fails?
+1️⃣ EC2 instance terminated manually
+2️⃣ Auto Scaling detects failure
+3️⃣ New EC2 launched automatically
+4️⃣ Load Balancer registers new instance
+5️⃣ Website remains online 😎
 
-Test	                       Result
-Load Balancer DNS Working	✅
-Auto Healing Test	        ✅
-Auto Scaling Test	        ✅
-CloudWatch Alarm Created	✅
-CloudTrail Logs Verified	✅
+💼 Skills Demonstrated
+AWS • Linux • Networking • High Availability • Load Balancing • Monitoring • DevOps Fundamentals
 
-
-🎯 Key Achievements
-
-Built custom VPC networking from scratch
-
-Deployed Ubuntu web servers on EC2
-
-Implemented Application Load Balancer
-
-Configured Auto Scaling Group
-
-Enabled CloudWatch monitoring & alarms
-
-Enabled CloudTrail auditing
-
-Tested self-healing infrastructure
-
-👨‍💻 Author
-
+🧑‍💻 Author
 Irfan Pasha 
-
 AWS DevOps Hands-On Project
